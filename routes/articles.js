@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
     try{
         const article = {
             id: uuidv4(),
-            ...req,body,
+            ...req.body,
         };
         req.app.db.get('articles').push(article).write();
         res.status(201).send(article);

@@ -6,7 +6,7 @@ const low = require("lowdb");
 const articleRoutes = require("./routes/articles");
 
 //Set Port
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 //GetDb File
 const FileSync = require("lowdb/adapters/FileSync");
