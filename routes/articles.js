@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {v4: uuidv4} = require('uuid');
+const {v4: uuid4} = require('uuid');
 
 router.get("/", (req, res) => {
     const articles = req.app.db.get('articles');
@@ -15,14 +15,16 @@ router.get("/:id", (req, res) => {
         res.sendStatus(404);
     }
     res.send(article);
-})
+});
 
 router.post("/", (req, res) => {
     try{
+        console.log(req.body);
         const article = {
-            id: uuidv4(),
+            id: uuid4(),
             ...req.body,
         };
+        console.log(article);
         req.app.db.get('articles').push(article).write();
         res.status(201).send(article);
     }catch(err){
