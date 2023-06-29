@@ -26,7 +26,7 @@ const options = {
         info: {
             title: "Articles API - CERTUS",
             version: "0.0.1",
-            descrption: "Demo API for sales"
+            description: "Demo API for sales"
         },
         servers: [
             {
