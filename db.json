@@ -1,3 +1,11 @@
 {
-  "articles": []
+  "articles": [
+    {
+      "id": "6439c659-23e4-45f0-92a0-46a8146f974e",
+      "name": "Licuadora",
+      "price": 250,
+      "brand": "LG",
+      "stock": 15
+    }
+  ]
 }
